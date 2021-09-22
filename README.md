@@ -20,7 +20,7 @@ Initial Setup
 cd client/
 npm uninstall -g create-react-app
 npx create-react-app ./
-npm install axios moment react-file-base64 redux redux-thunk
+npm install axios moment react-file-base64 redux redux-thunk @material-ui/core
 # reset src/ directory with minimal index.js and App.js
 ```
 
@@ -43,3 +43,7 @@ The tutorial recommends setting up a MongoDB cluster in the cloud (for free): <h
 1. Database Access > Create a database user.
 1. Network Access > Add current IP address.
 1. Databases > Connect > Connect your application > Copy to server/index.js, with database username and password created above in step 3.
+
+### Additional Tutorial Materials
+
+- [Image](https://raw.githubusercontent.com/adrianhajdin/project_mern_memories/master/client/src/images/memories.png?token=AF56X74XONEUGZ4FD2FUIA27UURPI)
