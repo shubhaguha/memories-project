@@ -20,6 +20,8 @@ Initial Setup
 cd client/
 npm uninstall -g create-react-app
 npx create-react-app ./
+npm install axios moment react-file-base64 redux redux-thunk
+# reset src/ directory with minimal index.js and App.js
 ```
 
 ### Server
