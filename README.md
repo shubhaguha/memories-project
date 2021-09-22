@@ -5,6 +5,7 @@ By [JavaScript Mastery](https://www.youtube.com/channel/UCmXmlB4-HJytD7wek0Uo97A
 
 YouTube videos:
 - [Part 1](https://youtu.be/ngc9gnGgUdA)
+- [Part 2](https://youtu.be/aibtHnbeuio)
 
 Prerequisites
 ---
@@ -20,8 +21,7 @@ Initial Setup
 cd client/
 npm uninstall -g create-react-app
 npx create-react-app ./
-npm install axios moment react-file-base64 react-redux redux redux-thunk @material-ui/core
-# reset src/ directory with minimal index.js and App.js
+npm install axios moment react-file-base64 react-redux redux redux-thunk @material-ui/core @material-ui/icons
 ```
 
 ### Server
@@ -31,7 +31,6 @@ cd server/
 touch index.js
 npm init -y
 npm install body-parser cors express mongoose nodemon
-# import libraries in index.js
 ```
 
 ### Database
