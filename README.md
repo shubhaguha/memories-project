@@ -28,4 +28,6 @@ npx create-react-app ./
 cd server/
 touch index.js
 npm init -y
+npm install body-parser cors express mongoose nodemon
+# import libraries in index.js
 ```
