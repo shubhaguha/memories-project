@@ -96,3 +96,4 @@ The tutorial recommends using [Netlify](https://www.netlify.com/) to host the fr
 1. Sign in with GitHub.
 1. From inside client directory: `npm run build`.
 1. Sites > Drag and drop your site output folder here (without connecting to Git)
+1. Domain settings > Options > Edit site name
