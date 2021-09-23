@@ -70,3 +70,17 @@ The tutorial recommends using [Heroku](https://www.heroku.com/) to host the serv
     $ git commit -am "make it better"
     $ git push heroku master
     ```
+
+Alternative for deploying a subdirectory of git project:
+
+1. Heroku App Dashboard > Deploy > Deployment method > GitHub
+1. Heroku App Dashboard > Settings > Config Vars > Set `PROJECT_PATH` to subdirectory name.
+1. Add Buildpack:
+
+    ```shell
+    heroku buildpacks:set https://github.com/timanovsky/subdir-heroku-buildpack
+    heroku buildpacks:add heroku/nodejs  # or whatever buildpack you need for your application
+    heroku config:set PROJECT_PATH=server  # pointing to what you want to be a project root.
+    ```
+
+1. Deploy as usual, as above.
