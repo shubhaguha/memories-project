@@ -48,3 +48,25 @@ The tutorial recommends setting up a MongoDB cluster in the cloud (for free): <h
 - [Image](https://raw.githubusercontent.com/adrianhajdin/project_mern_memories/master/client/src/images/memories.png?token=AF56X74XONEUGZ4FD2FUIA27UURPI)
 - [Styles](https://gist.github.com/adrianhajdin/d99aaa67124f0de7667fd3937715fb26)
 - [Code Repo](https://github.com/adrianhajdin/project_mern_memories)
+
+### Deployment
+
+The tutorial recommends using [Heroku](https://www.heroku.com/) to host the server.
+
+1. Sign in.
+1. Create new app: <https://dashboard.heroku.com/apps>
+1. Follow Deploy instructions.
+
+    ```shell
+    $ # Install Heroku CLI and login
+    $ # https://devcenter.heroku.com/articles/heroku-cli
+    $ heroku login
+    $
+    $ # Add Heroku Git remote
+    $ heroku git:remote -a memories-project-shubha
+    $
+    $ # Deploy application
+    $ git add .
+    $ git commit -am "make it better"
+    $ git push heroku master
+    ```
