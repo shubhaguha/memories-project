@@ -43,15 +43,19 @@ The tutorial recommends setting up a MongoDB cluster in the cloud (for free): <h
 1. Network Access > Add current IP address.
 1. Databases > Connect > Connect your application > Copy to server/index.js, with database username and password created above in step 3.
 
-### Additional Tutorial Materials
+Additional Tutorial Materials
+---
 
 - [Image](https://raw.githubusercontent.com/adrianhajdin/project_mern_memories/master/client/src/images/memories.png?token=AF56X74XONEUGZ4FD2FUIA27UURPI)
 - [Styles](https://gist.github.com/adrianhajdin/d99aaa67124f0de7667fd3937715fb26)
 - [Code Repo](https://github.com/adrianhajdin/project_mern_memories)
 
-### Deployment
+Deployment
+---
 
-The tutorial recommends using [Heroku](https://www.heroku.com/) to host the server.
+### Backend
+
+The tutorial recommends using [Heroku](https://www.heroku.com/) to host the backend application.
 
 1. Sign in.
 1. Create new app: <https://dashboard.heroku.com/apps>
@@ -84,3 +88,11 @@ Alternative for deploying a subdirectory of git project:
     ```
 
 1. Deploy as usual, as above.
+
+### Frontend
+
+The tutorial recommends using [Netlify](https://www.netlify.com/) to host the frontend app.
+
+1. Sign in with GitHub.
+1. From inside client directory: `npm run build`.
+1. Sites > Drag and drop your site output folder here (without connecting to Git)
