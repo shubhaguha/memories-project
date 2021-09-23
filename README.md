@@ -30,7 +30,7 @@ npm install axios moment react-file-base64 react-redux redux redux-thunk @materi
 cd server/
 touch index.js
 npm init -y
-npm install body-parser cors express mongoose nodemon
+npm install body-parser cors express mongoose nodemon dotenv
 ```
 
 ### Database
