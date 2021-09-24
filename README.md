@@ -112,6 +112,10 @@ Part 3 of the tutorial recommends using [Zeet](https://zeet.co/) to host all par
 
 1. Sign in with GitHub.
 
+**NB**: Only 1 project can be deployed for free (according to tutorial). Now, subscription seems to be time-based rather than project-based, with 14 days free trial.
+
+**NB**: Don't forget to whitelist the IP of the server hosting the frontend app (i.e. the domain where the app is deployed); otherwise the Google Auth API will not work.
+
 Google Auth
 ---
 
