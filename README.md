@@ -6,6 +6,7 @@ By [JavaScript Mastery](https://www.youtube.com/channel/UCmXmlB4-HJytD7wek0Uo97A
 YouTube videos:
 - [Part 1](https://youtu.be/ngc9gnGgUdA)
 - [Part 2](https://youtu.be/aibtHnbeuio)
+- [Part 3](https://youtu.be/LKlO8vLvUao)
 
 Prerequisites
 ---
@@ -17,20 +18,26 @@ Initial Setup
 
 ### Client
 
-```bash
+```shell
 cd client/
 npm uninstall -g create-react-app
 npx create-react-app ./
 npm install axios moment react-file-base64 react-redux redux redux-thunk @material-ui/core @material-ui/icons
+
+# part 3: auth
+npm install jwt-decode react-google-login react-router-dom
 ```
 
 ### Server
 
-```bash
+```shell
 cd server/
 touch index.js
 npm init -y
 npm install body-parser cors express mongoose nodemon dotenv
+
+# part 3: auth
+npm install bcryptjs jsonwebtoken
 ```
 
 ### Database
@@ -53,7 +60,7 @@ Additional Tutorial Materials
 Deployment
 ---
 
-### Backend
+### Deploy Backend on Heroku
 
 The tutorial recommends using [Heroku](https://www.heroku.com/) to host the backend application.
 
@@ -89,7 +96,7 @@ Alternative for deploying a subdirectory of git project:
 
 1. Deploy as usual, as above.
 
-### Frontend
+### Deploy Frontend on Netlify
 
 The tutorial recommends using [Netlify](https://www.netlify.com/) to host the frontend app.
 
@@ -97,3 +104,9 @@ The tutorial recommends using [Netlify](https://www.netlify.com/) to host the fr
 1. From inside client directory: `npm run build`.
 1. Sites > Drag and drop your site output folder here (without connecting to Git)
 1. Domain settings > Options > Edit site name
+
+### Deploy Database, Backend, and Frontend all on Zeet
+
+Part 3 of the tutorial recommends using [Zeet](https://zeet.co/) to host all parts of the application together in one platform.
+
+1. Sign in with GitHub.
