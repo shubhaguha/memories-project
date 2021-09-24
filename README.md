@@ -56,6 +56,7 @@ Additional Tutorial Materials
 - [Image](https://raw.githubusercontent.com/adrianhajdin/project_mern_memories/master/client/src/images/memories.png?token=AF56X74XONEUGZ4FD2FUIA27UURPI)
 - [Styles](https://gist.github.com/adrianhajdin/d99aaa67124f0de7667fd3937715fb26)
 - [Code Repo](https://github.com/adrianhajdin/project_mern_memories)
+- [More styles](https://gist.github.com/adrianhajdin/cc90da3990871d509ccbd9068da5a636) for part 3
 
 Deployment
 ---
