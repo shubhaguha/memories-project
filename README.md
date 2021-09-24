@@ -146,3 +146,18 @@ This tutorial uses the React library `react-google-login` to authenticate with G
 > In Chrome, Settings --> Advanced --> Clear browsing data --> Cached images and files
 
 **NB**: Must allow pop-ups, by allowing cookies: Chrome address bar > Eye symbol > Site not working? > Allow cookies.
+
+Docker
+---
+
+Start up:
+
+```shell
+docker compose up --build -d
+```
+
+Shut down:
+
+```shell
+docker compose down
+```
