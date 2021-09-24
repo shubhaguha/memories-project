@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
 import { Avatar, Button, Paper, Grid, Typography, Container } from '@material-ui/core';
 import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
+import { GoogleLogin } from 'react-google-login';
 
 import useStyles from './styles';
 import Input from './Input';
+import Icon from './icon';
 
 const Auth = () => {
     const classes = useStyles();
@@ -21,6 +23,15 @@ const Auth = () => {
     const switchMode = () => {
         setIsSignup((prevIsSignup) => !prevIsSignup);
         setShowPassword(false);
+    };
+
+    const googleSuccess = async (res) => {
+        console.log(res);
+    };
+
+    const googleFailure = (error) => {
+        console.log(error);
+        console.log("Google Sign In was unsuccessful. Please try again later.")
     };
 
     return (
@@ -53,6 +64,25 @@ const Auth = () => {
                     <Button type="submit" fullWidth variant="contained" color="primary" className={classes.submit}>
                         {isSignup ? 'Sign Up' : 'Sign In'}
                     </Button>
+                    <GoogleLogin
+                        clientId="113414497073-cjav7rbp6hr5u9a71k0atbab19r3ok4a.apps.googleusercontent.com"
+                        render={(renderProps) => (
+                            <Button
+                                className={classes.googleButton}
+                                color="primary"
+                                fullWidth
+                                onClick={renderProps.onClick}
+                                disabled={renderProps.disabled}
+                                startIcon={<Icon />}
+                                variant="contained"
+                            >
+                                Google Sign In
+                            </Button>
+                        )}
+                        onSuccess={googleSuccess}
+                        onFailure={googleFailure}
+                        cookiePolicy="single_host_origin"
+                    />
                     <Grid container justify="flex-end">
                         <Grid item>
                             <Button onClick={switchMode}>

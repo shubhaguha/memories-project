@@ -111,3 +111,34 @@ The tutorial recommends using [Netlify](https://www.netlify.com/) to host the fr
 Part 3 of the tutorial recommends using [Zeet](https://zeet.co/) to host all parts of the application together in one platform.
 
 1. Sign in with GitHub.
+
+Google Auth
+---
+
+This tutorial uses the React library `react-google-login` to authenticate with Google's authentication API. This library provides the `GoogleLogin` component, which requires a `clientId` property. To get this client ID:
+
+1. Go to <https://console.developers.google.com>.
+1. Click on "OAuth consent screen" on the left side bar.
+1. Create a project.
+
+    1. (Edit app registration) Enter App name, User support email, Developer contact information. Save and continue.
+    1. (Scopes) Save and continue.
+    1. (Test users) Save and continue.
+    1. (Summary) Back to dashboard.
+
+1. Click on "Credentials" on left side bar.
+1. Click on "+ Create credentials" on top bar > Choose "OAuth client ID".
+
+    1. Choose application type "Web application".
+    1. Enter app name.
+    1. Authorized JavaScript origins > + Add URI > "https://localhost:3000" and "http://localhost:3000".
+    1. Authorized redirect URIs > + Add URI > "http://localhost:3000" and "http://localhost:3000/auth".
+    1. Create.
+
+1. Save Client ID and Client Secret.
+
+**NB**: For Google Auth to start working, you first need to clear your cache in Chrome. :shrug: [Stack Overflow](https://stackoverflow.com/questions/43964539/google-api-not-a-valid-origin-for-the-client-url-has-not-been-whitelisted-for) says:
+
+> In Chrome, Settings --> Advanced --> Clear browsing data --> Cached images and files
+
+**NB**: Must allow pop-ups, by allowing cookies: Chrome address bar > Eye symbol > Site not working? > Allow cookies.
