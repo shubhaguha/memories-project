@@ -6,7 +6,8 @@ By [JavaScript Mastery](https://www.youtube.com/channel/UCmXmlB4-HJytD7wek0Uo97A
 YouTube videos:
 - [Part 1](https://youtu.be/ngc9gnGgUdA)
 - [Part 2](https://youtu.be/aibtHnbeuio)
-- [Part 3](https://youtu.be/LKlO8vLvUao)
+- [Part 3](https://youtu.be/LKlO8vLvUao) - Auth
+- [Part 4](https://youtu.be/LYWgPSbPDfQ) - Pagination, Search
 
 Prerequisites
 ---
@@ -26,6 +27,9 @@ npm install axios moment react-file-base64 react-redux redux redux-thunk @materi
 
 # part 3: auth
 npm install jwt-decode react-google-login react-router-dom
+
+# part 4: pagination 
+npm install @material-ui/lab material-ui-chip-input --force
 ```
 
 ### Server
