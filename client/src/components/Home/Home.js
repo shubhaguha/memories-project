@@ -8,7 +8,7 @@ import Posts from '../Posts/Posts';
 import Form from '../Form/Form';
 import Pagination from '../Pagination';
 import useStyles from './styles';
-import { getPosts } from '../../actions/posts';
+import { getPosts, getPostsBySearch } from '../../actions/posts';
 
 function useQuery() {
     return new URLSearchParams(useLocation().search);
@@ -30,8 +30,8 @@ const Home = () => {
     }, [currentId, dispatch]);
 
     const searchPost = () => {
-        if (search.trim()) {
-            // dispatch -> fetch search post
+        if (search.trim() || tags) {
+            dispatch(getPostsBySearch({ search, tags: tags.join(',') }));
         } else {
             history.push('/');
         }
