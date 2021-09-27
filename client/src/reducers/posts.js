@@ -11,8 +11,9 @@ export default (state = { posts: [] }, action) => {
                 numberOfPages: action.payload.numberOfPages,
             }
         case FETCH_BY_SEARCH:
-        case CREATE:
             return { ...state, posts: action.payload };
+        case CREATE:
+            return { ...state, posts: [ ...state.posts, action.payload ] };
         case UPDATE:
         case LIKE:
             return { ...state, posts: state.posts.map((post) => post._id === action.payload._id ? action.payload : post) };
