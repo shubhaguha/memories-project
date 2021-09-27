@@ -57,10 +57,22 @@ The tutorial recommends setting up a MongoDB cluster in the cloud (for free): <h
 Additional Tutorial Materials
 ---
 
+Parts 1 & 2:
+
 - [Image](https://raw.githubusercontent.com/adrianhajdin/project_mern_memories/master/client/src/images/memories.png?token=AF56X74XONEUGZ4FD2FUIA27UURPI)
 - [Styles](https://gist.github.com/adrianhajdin/d99aaa67124f0de7667fd3937715fb26)
 - [Code Repo](https://github.com/adrianhajdin/project_mern_memories)
-- [More styles](https://gist.github.com/adrianhajdin/cc90da3990871d509ccbd9068da5a636) for part 3
+
+Part 3:
+
+- [More styles](https://gist.github.com/adrianhajdin/cc90da3990871d509ccbd9068da5a636)
+
+Part 4:
+
+- [Logo](https://i.ibb.co/NyJqJWK/memories-Logo.png)
+- [Text](https://i.ibb.co/cvkcJFm/memories-Text.png)
+- [Styles](https://gist.github.com/adrianhajdin/83194cd8c920e6cf79dd83f03076f167)
+
 
 Deployment
 ---
