@@ -11,11 +11,17 @@ const CommentSection = ({ post }) => {
     const [comment, setComment] = useState('');
     const user = JSON.parse(localStorage.getItem('profile'));
     const dispatch = useDispatch();
+    const commentsRef = useRef();
 
-    const handleClick = () => {
-        const finalComment = `${user.result.name}: ${comment}`;
+    const handleComment = async () => {
+        const finalComment = `${user?.result?.name}: ${comment}`;
 
-        dispatch(commentPost(finalComment, post._id));
+        const newComments = await dispatch(commentPost(finalComment, post._id));
+
+        setComments(newComments);
+        setComment('');
+
+        commentsRef.current.scrollIntoView({ behavior: 'smooth' });
     };
 
     return (
@@ -28,6 +34,7 @@ const CommentSection = ({ post }) => {
                             {c}
                         </Typography>
                     ))}
+                    <div ref={commentsRef} />
                 </div>
                 {user?.result?.name && (
                     <div style={{ width: '70%' }}>
@@ -41,7 +48,7 @@ const CommentSection = ({ post }) => {
                             value={comment}
                             onChange={(e) => setComment(e.target.value)}
                             />
-                        <Button style={{ marginTop: '10px' }} fullWidth disabled={!comment} variant="contained" color="primary" onClick={handleClick}>
+                        <Button style={{ marginTop: '10px' }} fullWidth disabled={!comment} variant="contained" color="primary" onClick={handleComment}>
                             Comment
                         </Button>
                     </div>
