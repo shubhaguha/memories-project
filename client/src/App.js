@@ -2,13 +2,23 @@ import React from 'react';
 import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom';
 import { Container } from '@material-ui/core';
 import { ThemeProvider, createMuiTheme } from '@material-ui/core/styles';
+import { green, purple } from '@material-ui/core/colors';
 
 import Navbar from './components/Navbar/Navbar';
 import Home from './components/Home/Home';
 import PostDetails from './components/PostDetails/PostDetails';
 import Auth from './components/Auth/Auth';
 
-const theme = createMuiTheme();
+const theme = createMuiTheme({
+    palette: {
+        primary: {
+            main: purple[500],
+        },
+        secondary: {
+            main: green[500],
+        },
+    },
+});
 
 const App = () => {
     const user = JSON.parse(localStorage.getItem('profile'));
